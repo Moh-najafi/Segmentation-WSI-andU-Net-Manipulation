@@ -1,12 +1,15 @@
 # Segmentation-WSI-andU-Net-Manipulation
 This is the private project assigned by DiaDeep
+![image](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/89ce8021-4393-41d1-aadb-f00beb45fec7)
 # Objectives
 
 The main goal here is to prepare WSIs data for a segmentation task. We have at our disposal original WSIs together with annotations (region of interest). The following are the steps you are supposed to provide: 
 
 1. Cropping the WSI to get only the “tissue regions”. In fact, a major part of the WSIs is composed of background and other artefacts, see the image below:
 
-![Screenshot 2023-03-29 at 14.49.25.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aadac7b5-9b35-4330-a709-64ca89a47ab1/Screenshot_2023-03-29_at_14.49.25.png)
+![image](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/ae210916-beb2-4129-ae12-6a3bb5540866)
+
+
 
 In this example, you should save the 6 cropped tissue samples (left) to a local folder as `filename_i.png` at a **downsample scale of 32** (the number of samples in each image is `i>=1`).
 
