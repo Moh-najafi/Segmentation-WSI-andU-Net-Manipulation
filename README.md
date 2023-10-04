@@ -28,3 +28,13 @@ the mask is obtained as follows:
 
 ![extracted mask](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/83cab7a4-c2d8-4656-af99-2932ad1dff1d)
 
+
+The next step is preparing the mask data for image segmentation. To reach the mask as ground truth with need to have a binary mask. In addition for segmentation, we can have 2 approaches. the first one could be related to annotation terms and we can use the original mask, the second one is for tissue segmentation which is mentioned in task 2.
+in the following, you can see the binary masks, registered masks, and each tissue mask separately which is prepared for further processing if asked.
+
+![filled morphed mask](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/253439e2-3b1f-45a1-97ad-57af9ffe890f)
+![filled morphed registered](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/92d6e580-676d-43c0-81af-466f87e41567)
+
+![labeling different region](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/5361a534-81cf-4071-8d88-dffacabb963b)
+![each tissue registered](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/2368114d-46f3-4211-aa13-aa73e84b30ba)
+
