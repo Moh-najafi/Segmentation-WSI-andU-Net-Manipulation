@@ -7,6 +7,7 @@ H I 😀
 
 >This script is provided for **task 1** & **task 2** and **tile and Augmentation Preprocessing**.
 >This script is privately provided by Mohamad NAJAFI for the DiaDeep PhD applicant task. The task consists of three parts, and all the necessary scripts have been provided to achieve the requested results.
+>
 The description of task is provided as [Segmentation: WSI and U-Net Pipeline Manipulation](https://informationsharing.notion.siteSegmentation-WSI-and-U-Net-Pipeline-Manipulation-82a91afd8c24478f8be89c61bd04ba85).
 
 > It should be mentioned that the main challenges and important points are as follows for me:
@@ -43,6 +44,7 @@ For task 3, tiles action is applied to have patches for training and validation:
 ![random tiles](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/27d9aa9e-acf6-419f-a089-14178f702226)
 
 The last step is applying segmentation using smp using pytorch. As my computational source and data are limited, (epochs = 15 and various augmentation method are scripted as comments and is tested to be applicable if needed) I have just designed a prototype version and you can see the result of applying a pre-trained model with 'imagenet' weights in the next images. The validation loss plot is also obtained. ( I have tried smp model without applying pretrained weights and results are not well enough in low values of epochs). 
+
 ![val_loss of pretrained model](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/59aea6a2-abc4-42cb-ae77-989d99424b68)
 
 ![pretrained model result5](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/d4d54e53-2b54-434b-a494-c34adfcc2923)
