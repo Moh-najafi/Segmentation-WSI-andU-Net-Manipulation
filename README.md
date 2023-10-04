@@ -55,7 +55,11 @@ The last step is applying segmentation using smp using pytorch. As my computatio
 
 
 Lastly, I want to mention that consider this as a prototype and it could be modified with the objective and data and suited computational source to test.
-
+You can also download the prototype version of the fine-tuned pre-trained model with 15 epochs with the following link:
+https://drive.google.com/file/d/1mlq5dmFtXn0TiE-1S-_iE6aD9xQ8O8fX/view?usp=sharing
+The access is provided for:
+y.salhi@diadeep.com
+s.salhi@diadeep.com
 Regards,
 M Najafi
 
