@@ -1,6 +1,7 @@
 # Segmentation-WSI-andU-Net-Manipulation
 This is the private project assigned by DiaDeep
-![image](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/89ce8021-4393-41d1-aadb-f00beb45fec7)
+![slide_DS32_1](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/2af6a789-1677-493a-9e4d-9fc32b121c9e)
+
 # Objectives
 
 H I 😀
@@ -23,7 +24,7 @@ The description of task is provided as [Segmentation: WSI and U-Net Pipeline Man
 > Mohamad Najafi
 
 
-The first part of the task is to prepare the data with its label mask which results from geometry data that results from 'annotations.csv' file and the main image 'm9de8lfp.tif'. I have done it by extracting geometry data from the original WSI image and use 'pylibs' and 'shapely' libraries.
+The first part of the task is to prepare the data with its label mask which results from geometry data that results from 'annotations.csv' file and the main image 'm9de8lfp.tif'. I have done it by extracting geometry data from the original WSI image and using 'pylibs' and 'shapely' libraries.
 the mask is obtained as follows:
-![m9de8lfp_MASK_new_32](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/eada77f9-51fa-4302-a552-8585d99c6ce7)
+
 
