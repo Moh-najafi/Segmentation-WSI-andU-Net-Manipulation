@@ -38,3 +38,23 @@ in the following, you can see the binary masks, registered masks, and each tissu
 ![labeling different region](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/5361a534-81cf-4071-8d88-dffacabb963b)
 ![each tissue registered](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/2368114d-46f3-4211-aa13-aa73e84b30ba)
 
+
+For task 3, tiles action is applied to have patches for training and validation: you can find some random tiles with their masks in the next plot of tiles:
+![random tiles](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/27d9aa9e-acf6-419f-a089-14178f702226)
+
+The last step is applying segmentation using smp using pytorch. As my computational source and data are limited, (epochs = 15 and various augmentation method are scripted as comments and is tested to be applicable if needed) I have just designed a prototype version and you can see the result of applying a pre-trained model with 'imagenet' weights in the next images. The validation loss plot is also obtained. ( I have tried smp model without applying pretrained weights and results are not well enough in low values of epochs). 
+![val_loss of pretrained model](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/59aea6a2-abc4-42cb-ae77-989d99424b68)
+
+![pretrained model result5](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/d4d54e53-2b54-434b-a494-c34adfcc2923)
+![pretrained model result2](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/cbd271f1-d93a-4a67-a09d-23f633a13c49)
+![pretrained model result4](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/e0970604-1f3f-4d16-b508-d96e98c9ecfc)
+
+![pretrained model result3](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/e5297a98-9083-4132-97f6-b88dd0c9f91b)
+
+
+Lastly, I want to mention that consider this as a prototype and it could be modified with the objective and data and suited computational source to test.
+
+Regards,
+M Najafi
+
+
