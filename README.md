@@ -10,11 +10,11 @@ H I 😀
 >
 The description of task is provided as [Segmentation: WSI and U-Net Pipeline Manipulation](https://informationsharing.notion.siteSegmentation-WSI-and-U-Net-Pipeline-Manipulation-82a91afd8c24478f8be89c61bd04ba85).
 
-> In summary, mask of WSI image provided in 'annotation.csv' with specific format. The steps are as follows:
+> In summary, the mask of WSI image is provided in 'annotation.csv' with a specific format. The steps are as follows:
 - Extracting ROI info from csv file, 
 - Preprocessing the data to reach the desired mask win downsample version (using pyvips) (reaching to the state in which you can select tissues of you want to have their specific mask)
-- Tile preprocessing to provide a image patches for train and validation and augmentation of data(using pyvips)
-- Conducting Train and validation, see some random prediction and applying error analysis to improve 
+- Tile preprocessing to provide image patches for train validation and augmentation of data(using pyvips)
+- Conducting train and validation, seeing some random predictions and applying error analysis to improve 
   
 
 
@@ -64,8 +64,8 @@ Lastly, I want to mention that consider this as a prototype and it could be modi
 You can also download the prototype version of the fine-tuned pre-trained model with 15 epochs with the following link:
 https://drive.google.com/file/d/1mlq5dmFtXn0TiE-1S-_iE6aD9xQ8O8fX/view?usp=sharing
 
-Updates and comment:
-I augmented data a little as there would be a higher cost in terms of time and resources if I want to apply various augmentation methods with strides that produce more images and there is an improvement in image segmentation (binary classification) of tissues ROI and in the following I am providing more images. however, as the data diversity is not high enough, we may have some defects in the cost function of the validation set. This issue can be solved by applying more diverse WSI for training, and also by applying more augmented data which needs more computational sources for trial on training and validation to be optimized. (considering dropout if needed)
+Updates and comments:
+I augmented data in 3 ways as there would be a higher cost in terms of time and resources if I want to apply various augmentation methods with strides that produce more images and there is an improvement in image segmentation (binary classification) of tissues ROI and in the following I am providing more images. however, as the data diversity is not high enough, we may have some defects in the cost function of the validation set. This issue can be solved by applying more diverse WSI for training and validation, and also by applying more augmented data which needs more computational sources for trial on training and validation to be optimized. (considering dropout if needed)
 
 The updated version of fine-tuned pre-trained in 30 epochs has the cost function as follows which is not stable in some epochs that might have root in not enjoying diverse data both in training and testing and might have been overfitted somehow in training se that can be tackled with more data as a rule of thumbs.
 ![image](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/3bc5da16-b7b8-43e9-905a-b87e797f9b77)
@@ -75,13 +75,28 @@ some result images of this updated algorithm from test data:
 ![image](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/f4e6073a-8ef9-44bc-8292-82fd79568618)
 ![image](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/d8531480-ea0e-429f-976f-2b403cca04ca)
 
+and there is another update: (the picks are in cost function might be solved by more diversified data for training and testing.
+tile_size = 512
+stride = 256
+171 images for train:
+45 for validation:
+Total tiles: 216 
+augmentations = [HorizontalFlip(p=1), ElasticTransform(p=1)]
+
+![image](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/53718643-943d-48a5-bf07-c9243af91a8d)
+
+
+![6](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/83d5aef6-3eb0-445d-ba4d-ce1700ea0006)
+![6](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/c1136b29-92c8-4740-9658-3940e7edb956)
+![6_2](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/84872461-e16d-42c2-bf5f-4c95faa95af8)![6_4](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/1a870251-3c4d-471d-a02e-c303bf077627)
+![7](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/2f9dd993-60d8-432e-9ec1-a943821f59f6)
+![9](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/3085aa79-134d-43dc-99bb-34dcd3dc6154)
 
 
 
 
 
-
-> From a prospective view, in my opinion, designing a pipeline to apply segmentation for tissue ROI is the first step. Having reached the level in which this algorithm could be reliable enough for this objective, the next phase can be the segmentation via annotation terms that have been provided in 'annotation.csv' file to segment each selected tissue into 5 classes as follows:
+> For the next step, in my opinion, designing a pipeline to apply segmentation for tissue ROI is the first step. Having reached the  desired algorithm which can be reliable enough for this objective, the next is the segmentation via annotation terms that have been provided in 'annotation.csv' file to segment each selected tissue into 5 classes as follows:
     'Dermal component of melanoma'
     'Intra-epidermal component of melanoma'
     'Normal dermis'
