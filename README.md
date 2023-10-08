@@ -65,9 +65,9 @@ You can also download the prototype version of the fine-tuned pre-trained model 
 https://drive.google.com/file/d/1mlq5dmFtXn0TiE-1S-_iE6aD9xQ8O8fX/view?usp=sharing
 
 Updates and comments:
-I augmented data in 3 ways as there would be a higher cost in terms of time and resources if I want to apply various augmentation methods with strides that produce more images and there is an improvement in image segmentation (binary classification) of tissues ROI and in the following I am providing more images. however, as the data diversity is not high enough, we may have some defects in the cost function of the validation set. This issue can be solved by applying more diverse WSI for training and validation, and also by applying more augmented data which needs more computational sources for trial on training and validation to be optimized. (considering dropout if needed)
+I augmented data in 3 ways as there would be a higher cost in terms of time and resources if I want to apply various augmentation methods with strides that produce more images and there can be an improvement in image segmentation (binary classification) of tissues ROI, and in the following I am providing more images. However, as the data diversity is not high enough, we may have some defects in the cost function of the validation set. This issue can be solved by applying more diverse WSI for training and validation, and also by applying more augmented data which needs more computational sources for conducting trial and error on training and validation in order to optimization. (considering dropout if needed)
 
-The updated version of fine-tuned pre-trained in 30 epochs has the cost function as follows which is not stable in some epochs that might have root in not enjoying diverse data both in training and testing and might have been overfitted somehow in training se that can be tackled with more data as a rule of thumbs.
+The updated version of fine-tuned pre-trained in 30 epochs has the cost function as follows which is not stable in some epochs that might have root in not enjoying diverse data both in training and testing and might have been overfitted somehow in training set.
 ![image](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/3bc5da16-b7b8-43e9-905a-b87e797f9b77)
 
 some result images of this updated algorithm from test data:
@@ -75,7 +75,7 @@ some result images of this updated algorithm from test data:
 ![image](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/f4e6073a-8ef9-44bc-8292-82fd79568618)
 ![image](https://github.com/Moh-najafi/Segmentation-WSI-andU-Net-Manipulation/assets/93668623/d8531480-ea0e-429f-976f-2b403cca04ca)
 
-and there is another update: (the picks are in cost function might be solved by more diversified data for training and testing.
+and there is another update: (the picks are in cost function might be solved by more diversified data for training and validating.
 tile_size = 512
 stride = 256
 171 images for train:
