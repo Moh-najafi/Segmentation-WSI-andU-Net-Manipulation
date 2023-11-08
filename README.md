@@ -6,7 +6,7 @@ This is the private project assigned by DiaDeep
 H I 😀
 
 >This script is provided for **task 1** & **task 2** and **tile and Augmentation Preprocessing**.
->This script is privately provided by Mohamad NAJAFI for the DiaDeep PhD applicant task. The task consists of three parts, and all the necessary scripts have been provided to achieve the requested results.
+
 >
 The description of task is provided as [Segmentation: WSI and U-Net Pipeline Manipulation](https://informationsharing.notion.siteSegmentation-WSI-and-U-Net-Pipeline-Manipulation-82a91afd8c24478f8be89c61bd04ba85).
 
