@@ -105,9 +105,7 @@ augmentations = [HorizontalFlip(p=1), ElasticTransform(p=1)]
 
 
  
-The access is provided for:
-y.salhi@diadeep.com
-s.salhi@diadeep.com
+
 Regards,
 M Najafi
 
